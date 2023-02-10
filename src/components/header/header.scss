@@ -1,17 +1,21 @@
 header {
     height: 965px;
     background-color: #3F3F3F;
+
     .upperPart {
         padding: 59px 80px 0px 80px;
         display: grid;
         grid-template-columns: auto auto;
         align-items: center;
+        animation: upperPart 3s forwards ease-out;
+
         .webDevName {
             display: flex;
             column-gap: 8px;
+
             %commonTypographyNameStyle {
                 font-size: 44px;
-                font-family: 'Source Sans Pro',Arial, Helvetica, sans-serif;
+                font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
             }
 
             .firstName {
@@ -19,47 +23,106 @@ header {
                 color: #FCA311;
                 font-weight: 700;
             }
-            .LastName{
+
+            .LastName {
                 @extend %commonTypographyNameStyle;
                 color: #FFFFFF;
                 font-weight: 500;
             }
         }
-        nav{
+
+        nav {
             display: flex;
             column-gap: 16px;
             justify-self: end;
-            a{
+
+            li {
+                cursor: pointer;
+                list-style-type: none;
                 text-decoration: none;
                 color: #FFFFFF;
                 font-size: 16px;
                 font-weight: 400;
-                font-family: 'Source Sans Pro',Arial, Helvetica, sans-serif;
+                font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
                 letter-spacing: 0.02em;
+                padding: 0px 0px 10px 0px;
+            }
+
+            li:hover {
+                border-bottom: 2px solid #FCA311;
+                border-bottom-left-radius: 1px;
+                border-bottom-right-radius: 1px;
+                padding: 0px 0px 8px 0px;
+            }
+
+        }
+
+        @keyframes upperPart {
+            0% {
+                transform: translateY(-30%);
+                opacity: 0;
+            }
+
+            20% {
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 1;
             }
         }
     }
-    .middlePart{
+
+    .middlePart {
         margin: 204px 0px 0px 332px;
-        .helloIntro{
+
+        .helloIntro {
+            animation: helloIntro 2s forwards ease-out;
             font-size: 60px;
             font-weight: 700;
             font-family: 'Source Sans Pro';
             width: 380px;
             color: white;
-            .name{
+
+            .name {
                 color: #FBA820;
             }
         }
-        .shortStatement{
+
+        .shortStatement {
+            animation: shortStatement 2s forwards ease-out;
             font-size: 18px;
             font-family: 'Open Sans';
-            color:white;
+            color: white;
             width: 354px;
         }
-        .getInTouch{
+
+        @keyframes helloIntro {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes shortStatement {
+            from {
+                opacity: 0;
+                transform: translateX(+50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .getInTouch {
             cursor: pointer;
-            width:198px;
+            width: 198px;
             height: 60px;
             border-radius: 33px;
             border: 1px solid #FBA820;
@@ -68,13 +131,21 @@ header {
             font-size: 16px;
             color: #FFFFFF;
             font-family: 'Source Sans Pro';
+            transition: 1s;
+        }
+
+        .getInTouch:hover {
+            color: #3F3F3F;
+            background-color: #FBA820;
         }
     }
-    .bottomPart{
+
+    .bottomPart {
         margin: 80px 0px 0px 337px;
         display: flex;
         column-gap: 16px;
-        img{
+
+        img {
             max-height: 24px;
             filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
         }

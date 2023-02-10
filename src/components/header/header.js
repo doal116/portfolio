@@ -11,11 +11,11 @@ function Header() {
                     <span className='LastName'>Bulganin</span>
                 </div>
                 <nav>
-                    <a >Portfolio</a>
-                    <a >Skills</a>
-                    <a >Certifications</a>
-                    <a >About</a>
-                    <a >Resume</a>
+                    <li>Portfolio</li>
+                    <li>Skills</li>
+                    <li>Certifications</li>
+                    <li>About</li>
+                    <li>Resume</li>
                 </nav>
             </div>
             <div className='middlePart'>
