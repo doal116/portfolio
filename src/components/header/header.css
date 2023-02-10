@@ -1,0 +1,82 @@
+header {
+  height: 965px;
+  background-color: #3F3F3F;
+}
+header .upperPart {
+  padding: 59px 80px 0px 80px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+header .upperPart .webDevName {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+header .upperPart .webDevName .LastName, header .upperPart .webDevName .firstName {
+  font-size: 44px;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+header .upperPart .webDevName .firstName {
+  color: #FCA311;
+  font-weight: 700;
+}
+header .upperPart .webDevName .LastName {
+  color: #FFFFFF;
+  font-weight: 500;
+}
+header .upperPart nav {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  justify-self: end;
+}
+header .upperPart nav a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02em;
+}
+header .middlePart {
+  margin: 204px 0px 0px 332px;
+}
+header .middlePart .helloIntro {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: "Source Sans Pro";
+  width: 380px;
+  color: white;
+}
+header .middlePart .helloIntro .name {
+  color: #FBA820;
+}
+header .middlePart .shortStatement {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: white;
+  width: 354px;
+}
+header .middlePart .getInTouch {
+  cursor: pointer;
+  width: 198px;
+  height: 60px;
+  border-radius: 33px;
+  border: 1px solid #FBA820;
+  background-color: transparent;
+  margin-top: 54px;
+  font-size: 16px;
+  color: #FFFFFF;
+  font-family: "Source Sans Pro";
+}
+header .bottomPart {
+  margin: 80px 0px 0px 337px;
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+header .bottomPart img {
+  max-height: 24px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
+}/*# sourceMappingURL=header.css.map */
