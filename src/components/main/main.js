@@ -1,11 +1,20 @@
 import './main.css';
+import react from './react.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faChevronLeft, faChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 
 const Skills = ({ skills }) => {
     return (
         <div className='skills'>
             {
                 skills.map(skill =>
-                    <div className='skill'>{skill}</div>
+                    <div className='skill'>
+                        <img src={react} alt={'react log'}></img>
+                        <span>{skill}</span>
+                        <span className='experience'>1 year of experience</span>
+                    </div>
                 )
             }
 
@@ -28,9 +37,13 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <div className='rightSide'>
-                    <Skills skills={['hello', 'goodBey', 'nice to see you', 'life']} />
-                    <div className='prev'></div>
-                    <div className='next'></div>
+                    <Skills skills={['React', 'React', 'React', 'Python']} />
+                    <div className='prev'>
+                        <i><FontAwesomeIcon icon={faChevronLeft} /></i>
+                    </div>
+                    <div className='next'>
+                        <i><FontAwesomeIcon icon={faChevronRight} /></i>
+                    </div>
                 </div>
             </div>
         </div>

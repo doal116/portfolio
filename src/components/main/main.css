@@ -51,7 +51,6 @@
 .aboutMe .info .rightSide {
   position: relative;
   width: 627px;
-  background-color: red;
 }
 .aboutMe .info .rightSide .skills {
   display: flex;
@@ -65,7 +64,21 @@
   width: 200px;
   height: 200px;
   flex: 0 0 auto;
-  background-color: blue;
+  background-color: #3F3F3F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutMe .info .rightSide .skills .skill img {
+  margin: auto 0px auto 0px;
+  max-width: 50%;
+}
+.aboutMe .info .rightSide .skills .skill .experience {
+  padding: 0px 0px 16px 0px;
+}
+.aboutMe .info .rightSide .skills .skill span {
+  color: white;
+  font-family: "Source Sans Pro";
 }
 .aboutMe .info .rightSide .skills::-webkit-scrollbar {
   background-color: transparent;
@@ -73,11 +86,21 @@
 }
 .aboutMe .info .rightSide .next, .aboutMe .info .rightSide .prev {
   position: absolute;
-  height: 24px;
-  background-color: #3F3F3F;
-  top: 45%;
+  height: 36px;
+  background-color: white;
+  top: 42%;
   width: 24px;
+  cursor: pointer;
+}
+.aboutMe .info .rightSide .prev {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.aboutMe .info .rightSide .prev i {
+  text-align: center;
 }
 .aboutMe .info .rightSide .next {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
   right: 0;
 }/*# sourceMappingURL=main.css.map */
