@@ -1,0 +1,83 @@
+.aboutMe {
+  height: 724px;
+}
+.aboutMe .info {
+  margin: 150px auto auto auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+.aboutMe .info .leftSide {
+  width: 531px;
+}
+.aboutMe .info .leftSide .hireCv .downloadCv, .aboutMe .info .leftSide .hireCv .hireMe {
+  cursor: pointer;
+  height: 56px;
+  border: none;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+  font-weight: 600;
+}
+.aboutMe .info .leftSide .hireCv {
+  display: flex;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
+}
+.aboutMe .info .leftSide .hireCv .hireMe {
+  background-color: #3F3F3F;
+  color: white;
+  width: 138px;
+  transition: 1.2s;
+}
+.aboutMe .info .leftSide .hireCv .hireMe:hover {
+  color: #3F3F3F;
+  border: 1px solid rgba(80, 80, 80, 0.2196078431);
+  background-color: transparent;
+}
+.aboutMe .info .leftSide .hireCv .downloadCv {
+  width: 186px;
+  color: #3F3F3F;
+  border: 1px solid rgba(80, 80, 80, 0.2196078431);
+  background-color: transparent;
+  transition: 1.2s;
+}
+.aboutMe .info .leftSide .hireCv .downloadCv:hover {
+  background-color: #3F3F3F;
+  color: white;
+}
+.aboutMe .info .rightSide {
+  position: relative;
+  width: 627px;
+  background-color: red;
+}
+.aboutMe .info .rightSide .skills {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  width: inherit;
+  overflow-x: auto;
+}
+.aboutMe .info .rightSide .skills .skill {
+  margin: 8% 0px 0px 0px;
+  width: 200px;
+  height: 200px;
+  flex: 0 0 auto;
+  background-color: blue;
+}
+.aboutMe .info .rightSide .skills::-webkit-scrollbar {
+  background-color: transparent;
+  height: 0px;
+}
+.aboutMe .info .rightSide .next, .aboutMe .info .rightSide .prev {
+  position: absolute;
+  height: 24px;
+  background-color: #3F3F3F;
+  top: 45%;
+  width: 24px;
+}
+.aboutMe .info .rightSide .next {
+  right: 0;
+}/*# sourceMappingURL=main.css.map */

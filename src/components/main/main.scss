@@ -1,0 +1,97 @@
+.aboutMe {
+    height: 724px;
+
+    .info {
+        margin: 150px auto auto auto;
+        height: fit-content;
+        width: fit-content;
+        display: grid;
+        grid-template-columns: 50% auto;
+
+        .leftSide {
+            width: 531px;
+
+            %buttonsCommonDesign {
+                cursor: pointer;
+                height: 56px;
+                border: none;
+                font-family: 'Source Sans Pro';
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .hireCv {
+                display: flex;
+                column-gap: 22px;
+
+                .hireMe {
+                    @extend %buttonsCommonDesign;
+                    background-color: #3F3F3F;
+                    color: white;
+                    width: 138px;
+                    transition: 1.2s;
+                }
+
+                .hireMe:hover {
+                    color: #3F3F3F;
+                    border: 1px solid #50505038;
+                    background-color: transparent;
+                }
+
+                .downloadCv {
+                    @extend %buttonsCommonDesign;
+                    width: 186px;
+                    color: #3F3F3F;
+                    border: 1px solid #50505038;
+                    background-color: transparent;
+                    transition: 1.2s;
+                }
+
+                .downloadCv:hover {
+                    background-color: #3F3F3F;
+                    color: white;
+                }
+            }
+        }
+
+        .rightSide {
+            position: relative;
+            width: 627px;
+            background-color: red;
+
+            .skills {
+                display: flex;
+                column-gap: 30px;
+                width: inherit;
+                overflow-x: auto;
+
+                .skill {
+                    margin: 8% 0px 0px 0px;
+                    width: 200px;
+                    height: 200px;
+                    flex: 0 0 auto;
+                    background-color: blue;
+                }
+            }
+            .skills::-webkit-scrollbar{
+                background-color: transparent;
+                height: 0px;
+            }
+            %scrollButtons{
+                position: absolute;
+                height: 24px;
+                background-color: #3F3F3F;
+                top:45%;
+                width: 24px;
+            }
+            .prev{
+                @extend %scrollButtons;
+
+            }
+            .next{
+                @extend %scrollButtons;
+                right: 0;
+            }
+        }
+    }
+}
