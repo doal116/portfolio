@@ -1,7 +1,7 @@
-.aboutMe {
-  height: 724px;
+#aboutMe {
+  padding-bottom: 100px;
 }
-.aboutMe .info {
+#aboutMe .info {
   margin: 150px auto auto auto;
   height: -moz-fit-content;
   height: fit-content;
@@ -9,11 +9,13 @@
   width: fit-content;
   display: grid;
   grid-template-columns: 50% auto;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
-.aboutMe .info .leftSide {
+#aboutMe .info .leftSide {
   width: 531px;
 }
-.aboutMe .info .leftSide .hireCv .downloadCv, .aboutMe .info .leftSide .hireCv .hireMe {
+#aboutMe .info .leftSide .hireCv .downloadCv, #aboutMe .info .leftSide .hireCv .hireMe {
   cursor: pointer;
   height: 56px;
   border: none;
@@ -21,45 +23,48 @@
   font-size: 16px;
   font-weight: 600;
 }
-.aboutMe .info .leftSide .hireCv {
+#aboutMe .info .leftSide .hireCv {
   display: flex;
   -moz-column-gap: 22px;
        column-gap: 22px;
 }
-.aboutMe .info .leftSide .hireCv .hireMe {
+#aboutMe .info .leftSide .hireCv .hireMe {
   background-color: #3F3F3F;
   color: white;
   width: 138px;
   transition: 1.2s;
 }
-.aboutMe .info .leftSide .hireCv .hireMe:hover {
+#aboutMe .info .leftSide .hireCv .hireMe:hover {
   color: #3F3F3F;
   border: 1px solid rgba(80, 80, 80, 0.2196078431);
   background-color: transparent;
 }
-.aboutMe .info .leftSide .hireCv .downloadCv {
+#aboutMe .info .leftSide .hireCv .downloadCv {
   width: 186px;
   color: #3F3F3F;
   border: 1px solid rgba(80, 80, 80, 0.2196078431);
   background-color: transparent;
   transition: 1.2s;
 }
-.aboutMe .info .leftSide .hireCv .downloadCv:hover {
+#aboutMe .info .leftSide .hireCv .downloadCv:hover {
   background-color: #3F3F3F;
   color: white;
 }
-.aboutMe .info .rightSide {
+#aboutMe .info .rightSide {
   position: relative;
-  width: 627px;
+  width: 440px;
+  justify-self: end;
 }
-.aboutMe .info .rightSide .skills {
+#aboutMe .info .rightSide .skills {
   display: flex;
   -moz-column-gap: 30px;
        column-gap: 30px;
   width: inherit;
   overflow-x: auto;
+  padding: 0px 0px 20px 0px;
+  scroll-behavior: smooth;
 }
-.aboutMe .info .rightSide .skills .skill {
+#aboutMe .info .rightSide .skills .skill {
   margin: 8% 0px 0px 0px;
   width: 200px;
   height: 200px;
@@ -68,39 +73,76 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 5px 2px 15px rgb(81, 81, 81);
 }
-.aboutMe .info .rightSide .skills .skill img {
+#aboutMe .info .rightSide .skills .skill img {
   margin: auto 0px auto 0px;
   max-width: 50%;
 }
-.aboutMe .info .rightSide .skills .skill .experience {
+#aboutMe .info .rightSide .skills .skill .experience {
   padding: 0px 0px 16px 0px;
 }
-.aboutMe .info .rightSide .skills .skill span {
+#aboutMe .info .rightSide .skills .skill span {
   color: white;
   font-family: "Source Sans Pro";
 }
-.aboutMe .info .rightSide .skills::-webkit-scrollbar {
+#aboutMe .info .rightSide .skills::-webkit-scrollbar {
   background-color: transparent;
   height: 0px;
 }
-.aboutMe .info .rightSide .next, .aboutMe .info .rightSide .prev {
+#aboutMe .info .rightSide .next, #aboutMe .info .rightSide .prev {
   position: absolute;
   height: 36px;
   background-color: white;
-  top: 42%;
+  top: 38%;
   width: 24px;
   cursor: pointer;
 }
-.aboutMe .info .rightSide .prev {
+#aboutMe .info .rightSide .prev {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
 }
-.aboutMe .info .rightSide .prev i {
-  text-align: center;
+#aboutMe .info .rightSide .prev .prevArrow {
+  margin: 40% 0px 0px 20%;
 }
-.aboutMe .info .rightSide .next {
+#aboutMe .info .rightSide .next {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   right: 0;
+}
+#aboutMe .info .rightSide .next .nextArrow {
+  margin: 40% 0px 0px 20%;
+}
+
+#certificates {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto 0px auto;
+}
+#certificates h1 {
+  text-align: center;
+}
+#certificates .certificateDisplay {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 10px;
+}
+#certificates .certificateDisplay .certificateBox {
+  width: 350px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #3F3F3F;
+  padding: 5px;
+  height: 300px;
+  width: 380px;
+  background-size: 390px;
+  background-repeat: no-repeat;
+}
+#certificates .certificateDisplay .certificateBox .name {
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+  color: white;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

@@ -2,6 +2,14 @@ import github from './github.svg';
 import instagram from './instagram.svg';
 import linkedin from './linkedin.svg';
 import './header.css';
+function scroller(elem) {
+    let e = document.getElementById(elem);
+    e.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+        inline: 'center'
+    });
+}
 function Header() {
     return (
         <header>
@@ -14,7 +22,7 @@ function Header() {
                     <li>Portfolio</li>
                     <li>Skills</li>
                     <li>Certifications</li>
-                    <li>About</li>
+                    <li onClick={()=>scroller('aboutMe')}>About</li>
                     <li>Resume</li>
                 </nav>
             </div>
