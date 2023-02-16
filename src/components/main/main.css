@@ -194,8 +194,31 @@
 
 #portfolio {
   text-align: center;
+  font-family: "Source Sans Pro";
 }
 #portfolio p {
   margin: 0px auto 0px auto;
   width: 400px;
+}
+#portfolio .portfolioDisplay {
+  display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto 0px auto;
+  padding: 50px 0px 50px 0px;
+}
+#portfolio .portfolioDisplay .projectBox {
+  width: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 1px 1px 10px #929292;
+  padding: 20px 10px 30px 10px;
+}
+#portfolio .portfolioDisplay .projectBox .name {
+  font-size: 25px;
+}
+#portfolio .portfolioDisplay .projectBox img {
+  max-width: 300px;
 }/*# sourceMappingURL=main.css.map */

@@ -7,10 +7,12 @@ import git from './git.svg';
 import C from './c.svg';
 import node from './node.svg';
 import mongodb from './mongodb.svg';
+import ecommerce from './ecommerce.jpg';
 import responsiveWebDesign from './responsiveWebDesign.jpg';
 import relationalDatabase from './relationalDatabase.jpg';
 import frontEndLibraries from './frontEndLibraries.jpg';
 import javaScriptAlgo from './javascript.jpg';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronLeft, faChevronRight
@@ -188,10 +190,15 @@ const Portfolio = () => {
             <p>The projects that are currently finished and those that are being built are listed below.</p>
             <div className='portfolioDisplay'>
                 {
-                    <div>
-                        <img></img>
-                        <div></div>
-                    </div>
+                    [...Array(3)].map(elm =>
+                        <div className='projectBox'>
+                            <img src={ecommerce} alt="project Display"></img>
+                            <div>
+                                <h2 className='name'>E-commerce website</h2>
+                                <span className='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.</span>
+                            </div>
+                        </div>
+                    )
                 }
             </div>
         </div>

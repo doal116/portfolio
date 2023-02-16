@@ -227,10 +227,36 @@
     }
 }
 
-#portfolio{
+#portfolio {
     text-align: center;
-    p{
+    font-family: 'Source Sans Pro';
+
+    p {
         margin: 0px auto 0px auto;
         width: 400px;
+    }
+
+    .portfolioDisplay {
+        display: flex;
+        column-gap: 24px;
+        width: fit-content;
+        margin: 0px auto 0px auto;
+        padding: 50px 0px 50px 0px;
+
+        .projectBox {
+
+            width: 300px;
+            height: fit-content;
+            box-shadow: 1px 1px 10px #929292;
+            padding: 20px 10px 30px 10px;
+
+            .name {
+                font-size: 25px;
+            }
+
+            img{
+                max-width: 300px;
+            }
+        }
     }
 }
