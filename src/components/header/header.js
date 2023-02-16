@@ -5,9 +5,8 @@ import './header.css';
 function scroller(elem) {
     let e = document.getElementById(elem);
     e.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth',
-        inline: 'center'
+        block: 'center',
+        behavior: 'smooth'
     });
 }
 function Header() {
@@ -19,12 +18,11 @@ function Header() {
                     <span className='LastName'>Bulganin</span>
                 </div>
                 <nav>
-                    <li>Portfolio</li>
-                    <li>Skills</li>
-                    <li>Certifications</li>
                     <li onClick={()=>scroller('aboutMe')}>About</li>
-                    <li>Resume</li>
+                    <li onClick={()=>scroller('certificates')}>Certifications</li>
+                    <li onClick={()=>scroller('portfolio')}>Portfolio</li>
                 </nav>
+                <button className='resume'>Resume</button>
             </div>
             <div className='middlePart'>
                 <div className='intro' >

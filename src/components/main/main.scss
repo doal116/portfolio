@@ -2,7 +2,7 @@
     padding-bottom: 100px;
 
     .info {
-        margin: 150px auto auto auto;
+        margin: 100px auto auto auto;
         height: fit-content;
         width: fit-content;
         display: grid;
@@ -136,14 +136,19 @@
 }
 
 #certificates {
-    width: fit-content;
+    width: 100%;
     margin: 0px auto 0px auto;
+    padding: 100px 0px 100px 0px;
+    background-color: #EBEBEB;
 
     h1 {
         text-align: center;
+        font-family: 'Source Sans Pro';
     }
 
     .certificateDisplay {
+        margin: 50px auto 0px auto;
+        width: fit-content;
         display: grid;
         grid-template-columns: auto auto auto;
         column-gap: 20px;
@@ -152,19 +157,80 @@
         .certificateBox {
             width: 350px;
             height: fit-content;
-            background-color: #3F3F3F;
             padding: 5px;
             height: 300px;
             width: 380px;
             background-size: 390px;
             background-repeat: no-repeat;
+            cursor: pointer;
+            display: flex;
+            border-radius: 10px;
 
-            .name {
+            img {
+                border-radius: inherit;
+                position: absolute;
+                max-width: 380px;
+
+                transition: filter 1s;
+            }
+
+            .certificateInfo {
+                margin-bottom: -5px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-self: flex-end;
                 font-family: 'Source Sans Pro';
-                font-size: 20px;
-                color: white;
-                text-align: center;
+                padding: 10px 0px 16px 16px;
+                filter: brightness(100%);
+                background-color: #3F3F3F;
+                opacity: 0;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+
+                .name {
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: white;
+
+                }
+
+                .issuingOrg {
+                    align-self: flex-start;
+                    color: rgb(255, 255, 255);
+                }
+
             }
         }
+
+        .certificateBox:hover {
+            img {
+                filter: brightness(50%);
+            }
+
+        }
+
+        .certificateBox:hover .certificateInfo {
+            animation: certificateBoxinfo 1s forwards ease-in-out;
+        }
+
+        @keyframes certificateBoxinfo {
+            from {
+                transform: translateY(-20px);
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#portfolio{
+    text-align: center;
+    p{
+        margin: 0px auto 0px auto;
+        width: 400px;
     }
 }

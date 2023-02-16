@@ -98,7 +98,7 @@ const AboutMe = () => {
 
             if (!right && document.getElementById('skills').scrollLeft === 0)
                 right = true;
-        }, 2000);
+        }, 3500);
     });
 
     return (
@@ -131,10 +131,15 @@ const CertificateBox = ({ certificates }) => {
     return (
         certificates.map(
             (certificate, i) =>
-                <div className='certificateBox' style={{ 'backgroundImage': `url(${certificate['image']})` }}>
-                    <h4 className='name'>{certificate['name']}</h4>
-                    <h4>{certificate['issuingOrg']}</h4>
-                </div>
+                <a href={certificate['link']}>
+                    <div className='certificateBox' >
+                        <img src={certificate['image']} alt="certificate"></img>
+                        <div className='certificateInfo'>
+                            <span className='name'>{certificate['name']}</span>
+                            <span className='issuingOrg'>{certificate['issuingOrg']}</span>
+                        </div>
+                    </div>
+                </a>
         )
     )
 }
@@ -143,26 +148,26 @@ const Certificates = () => {
         {
             name: 'Response Web Design',
             image: responsiveWebDesign,
-            issuingOrg: ''
-            , link: ''
+            issuingOrg: 'Issued by FCC(freeCodeCamp)'
+            , link: 'https://www.freecodecamp.org/certification/fcc1609ce1d-ea08-4c43-ab2d-161da1cdae94/responsive-web-design'
         },
         {
             name: 'JavaScript Algorithms and Data Structures',
             image: javaScriptAlgo,
-            issuingOrg: ''
-            , link: ''
+            issuingOrg: 'Issued by FCC(freeCodeCamp)'
+            , link: 'https://www.freecodecamp.org/certification/fcc1609ce1d-ea08-4c43-ab2d-161da1cdae94/javascript-algorithms-and-data-structures'
         },
         {
             name: 'Front End Development Libraries',
             image: frontEndLibraries,
-            issuingOrg: ''
-            , link: ''
+            issuingOrg: 'Issued by FCC(freeCodeCamp)'
+            , link: 'https://www.freecodecamp.org/certification/fcc1609ce1d-ea08-4c43-ab2d-161da1cdae94/front-end-development-libraries'
         },
         {
             name: 'Relational Database',
             image: relationalDatabase,
-            issuingOrg: ''
-            , link: ''
+            issuingOrg: 'Issued by FCC(freeCodeCamp)'
+            , link: 'https://www.freecodecamp.org/certification/fcc1609ce1d-ea08-4c43-ab2d-161da1cdae94/relational-database-v8'
         }
 
     ];
@@ -175,11 +180,31 @@ const Certificates = () => {
         </div>
     )
 }
+
+const Portfolio = () => {
+    return (
+        <div id='portfolio'>
+            <h1>Portfolio</h1>
+            <p>The projects that are currently finished and those that are being built are listed below.</p>
+            <div className='portfolioDisplay'>
+                {
+                    <div>
+                        <img></img>
+                        <div></div>
+                    </div>
+                }
+            </div>
+        </div>
+    )
+}
+
+
 function Main() {
     return (
         <main>
             <AboutMe />
             <Certificates />
+            <Portfolio />
         </main>
     )
 }

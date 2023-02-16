@@ -2,7 +2,7 @@
   padding-bottom: 100px;
 }
 #aboutMe .info {
-  margin: 150px auto auto auto;
+  margin: 100px auto auto auto;
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
@@ -115,14 +115,19 @@
 }
 
 #certificates {
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
   margin: 0px auto 0px auto;
+  padding: 100px 0px 100px 0px;
+  background-color: #EBEBEB;
 }
 #certificates h1 {
   text-align: center;
+  font-family: "Source Sans Pro";
 }
 #certificates .certificateDisplay {
+  margin: 50px auto 0px auto;
+  width: -moz-fit-content;
+  width: fit-content;
   display: grid;
   grid-template-columns: auto auto auto;
   -moz-column-gap: 20px;
@@ -133,16 +138,64 @@
   width: 350px;
   height: -moz-fit-content;
   height: fit-content;
-  background-color: #3F3F3F;
   padding: 5px;
   height: 300px;
   width: 380px;
   background-size: 390px;
   background-repeat: no-repeat;
+  cursor: pointer;
+  display: flex;
+  border-radius: 10px;
 }
-#certificates .certificateDisplay .certificateBox .name {
+#certificates .certificateDisplay .certificateBox img {
+  border-radius: inherit;
+  position: absolute;
+  max-width: 380px;
+  transition: filter 1s;
+}
+#certificates .certificateDisplay .certificateBox .certificateInfo {
+  margin-bottom: -5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
   font-family: "Source Sans Pro";
-  font-size: 20px;
+  padding: 10px 0px 16px 16px;
+  filter: brightness(100%);
+  background-color: #3F3F3F;
+  opacity: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#certificates .certificateDisplay .certificateBox .certificateInfo .name {
+  font-size: 24px;
+  font-weight: bold;
   color: white;
+}
+#certificates .certificateDisplay .certificateBox .certificateInfo .issuingOrg {
+  align-self: flex-start;
+  color: rgb(255, 255, 255);
+}
+#certificates .certificateDisplay .certificateBox:hover img {
+  filter: brightness(50%);
+}
+#certificates .certificateDisplay .certificateBox:hover .certificateInfo {
+  animation: certificateBoxinfo 1s forwards ease-in-out;
+}
+@keyframes certificateBoxinfo {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#portfolio {
   text-align: center;
+}
+#portfolio p {
+  margin: 0px auto 0px auto;
+  width: 400px;
 }/*# sourceMappingURL=main.css.map */
