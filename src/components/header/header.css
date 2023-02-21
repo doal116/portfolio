@@ -7,7 +7,7 @@ header .upperPart {
   position: fixed;
   top: 0;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   align-items: center;
   animation: upperPart 3s forwards ease-out;
   background-color: #3F3F3F;
@@ -32,14 +32,7 @@ header .upperPart .webDevName .LastName {
   color: #FFFFFF;
   font-weight: 500;
 }
-header .upperPart nav {
-  display: flex;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
-  justify-self: center;
-  padding: 24px 0px 16px 0px;
-}
-header .upperPart nav li {
+header .upperPart .menu .phoneViewMenu nav li {
   cursor: pointer;
   list-style-type: none;
   text-decoration: none;
@@ -50,13 +43,13 @@ header .upperPart nav li {
   letter-spacing: 0.02em;
   padding: 0px 0px 10px 0px;
 }
-header .upperPart nav li:hover {
+header .upperPart .menu .phoneViewMenu nav li:hover {
   border-bottom: 2px solid #FCA311;
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
   padding: 0px 0px 8px 0px;
 }
-header .upperPart .resume {
+header .upperPart .menu .phoneViewMenu .resume {
   cursor: pointer;
   padding: 10px 16px 10px 16px;
   justify-self: center;
@@ -68,8 +61,11 @@ header .upperPart .resume {
   font-family: "Source Sans Pro";
   font-weight: bold;
   transition: 1s;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: center;
 }
-header .upperPart .resume:hover {
+header .upperPart .menu .phoneViewMenu .resume:hover {
   color: #3F3F3F;
   background-color: #FBA820;
 }
@@ -85,10 +81,11 @@ header .upperPart .resume:hover {
     opacity: 1;
   }
 }
-header .middlePart {
+
+.middlePart {
   padding: 204px 0px 0px 332px;
 }
-header .middlePart .helloIntro {
+.middlePart .helloIntro {
   animation: helloIntro 2s forwards ease-out;
   font-size: 60px;
   font-weight: 700;
@@ -96,10 +93,10 @@ header .middlePart .helloIntro {
   width: 380px;
   color: white;
 }
-header .middlePart .helloIntro .name {
+.middlePart .helloIntro .name {
   color: #FBA820;
 }
-header .middlePart .shortStatement {
+.middlePart .shortStatement {
   animation: shortStatement 2s forwards ease-out;
   font-size: 18px;
   font-family: "Open Sans";
@@ -126,7 +123,7 @@ header .middlePart .shortStatement {
     transform: translateX(0);
   }
 }
-header .middlePart .getInTouch {
+.middlePart .getInTouch {
   cursor: pointer;
   width: 198px;
   height: 60px;
@@ -139,17 +136,70 @@ header .middlePart .getInTouch {
   font-family: "Source Sans Pro";
   transition: 1s;
 }
-header .middlePart .getInTouch:hover {
+.middlePart .getInTouch:hover {
   color: #3F3F3F;
   background-color: #FBA820;
 }
-header .bottomPart {
+
+.bottomPart {
   margin: 80px 0px 0px 337px;
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
 }
-header .bottomPart img {
+.bottomPart img {
   max-height: 24px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
+}
+
+/* Computer view */
+@media only screen and (min-width: 900px) {
+  .upperPart .menu i {
+    display: none;
+  }
+  .upperPart .menu .phoneViewMenu {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .upperPart .menu .phoneViewMenu nav {
+    display: flex;
+    -moz-column-gap: 16px;
+         column-gap: 16px;
+    justify-self: start;
+    padding: 24px 0px 16px 0px;
+  }
+}
+/*phone & tablet view */
+@media only screen and (max-width: 900px) {
+  .upperPart .menu {
+    justify-self: end;
+    cursor: pointer;
+    color: white;
+    position: relative;
+  }
+  .upperPart .menu .phoneViewMenu {
+    display: none;
+  }
+  .upperPart .menu i {
+    padding: 0px 32px 0px 0px;
+  }
+  .upperPart .menu:hover .phoneViewMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 100vh;
+    padding: 40px 30px 40px 30px;
+    background-color: #3F3F3F;
+    display: grid;
+    grid-template-rows: auto auto;
+  }
+  .upperPart .menu:hover .phoneViewMenu nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 16px;
+  }
 }/*# sourceMappingURL=header.css.map */

@@ -7,7 +7,7 @@ header {
         position: fixed;
         top: 0;
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: auto auto;
         align-items: center;
         animation: upperPart 3s forwards ease-out;
         background-color: #3F3F3F;
@@ -37,146 +37,217 @@ header {
             }
         }
 
-        nav {
-            display: flex;
-            column-gap: 16px;
-            justify-self: center;
-            padding:24px 0px 16px 0px;
+        .menu {
+            .phoneViewMenu {
+                nav {
+                    li {
+                        cursor: pointer;
+                        list-style-type: none;
+                        text-decoration: none;
+                        color: #FFFFFF;
+                        font-size: 17px;
+                        font-weight: 400;
+                        font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+                        letter-spacing: 0.02em;
+                        padding: 0px 0px 10px 0px;
 
-            li {
-                cursor: pointer;
-                list-style-type: none;
-                text-decoration: none;
-                color: #FFFFFF;
-                font-size: 17px;
-                font-weight: 400;
-                font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-                letter-spacing: 0.02em;
-                padding: 0px 0px 10px 0px;
+                    }
 
-            }
+                    li:hover {
+                        border-bottom: 2px solid #FCA311;
+                        border-bottom-left-radius: 1px;
+                        border-bottom-right-radius: 1px;
+                        padding: 0px 0px 8px 0px;
+                    }
+                }
 
-            li:hover {
-                border-bottom: 2px solid #FCA311;
-                border-bottom-left-radius: 1px;
-                border-bottom-right-radius: 1px;
-                padding: 0px 0px 8px 0px;
-            }
+                .resume {
+                    cursor: pointer;
+                    padding: 10px 16px 10px 16px;
+                    justify-self: center;
+                    border-radius: 33px;
+                    border: 1px solid #FBA820;
+                    background-color: transparent;
+                    font-size: 20px;
+                    color: #ffb641;
+                    font-family: 'Source Sans Pro';
+                    font-weight: bold;
+                    transition: 1s;
+                    height: fit-content;
+                    align-self: center;
+                }
 
-
-        }
-
-        .resume {
-            cursor: pointer;
-            padding: 10px 16px 10px 16px;
-            justify-self: center;
-            border-radius: 33px;
-            border: 1px solid #FBA820;
-            background-color: transparent;
-            font-size: 20px;
-            color: #ffb641;
-            font-family: 'Source Sans Pro';
-            font-weight: bold;
-            transition: 1s;
-        }
-
-        .resume:hover {
-            color: #3F3F3F;
-            background-color: #FBA820;
-        }
-
-        @keyframes upperPart {
-            0% {
-                transform: translateY(-30%);
-                opacity: 0;
-            }
-
-            20% {
-                transform: translateY(0);
-            }
-
-            100% {
-                opacity: 1;
+                .resume:hover {
+                    color: #3F3F3F;
+                    background-color: #FBA820;
+                }
             }
         }
     }
 
-    .middlePart {
-        padding: 204px 0px 0px 332px;
-
-        .helloIntro {
-            animation: helloIntro 2s forwards ease-out;
-            font-size: 60px;
-            font-weight: 700;
-            font-family: 'Source Sans Pro';
-            width: 380px;
-            color: white;
-
-            .name {
-                color: #FBA820;
-            }
+    @keyframes upperPart {
+        0% {
+            transform: translateY(-30%);
+            opacity: 0;
         }
 
-        .shortStatement {
-            animation: shortStatement 2s forwards ease-out;
-            font-size: 18px;
-            font-family: 'Open Sans';
-            color: white;
-            width: 354px;
+        20% {
+            transform: translateY(0);
         }
 
-        @keyframes helloIntro {
-            from {
-                opacity: 0;
-                transform: translateX(-50%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes shortStatement {
-            from {
-                opacity: 0;
-                transform: translateX(+50%);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .getInTouch {
-            cursor: pointer;
-            width: 198px;
-            height: 60px;
-            border-radius: 33px;
-            border: 1px solid #FBA820;
-            background-color: transparent;
-            margin-top: 54px;
-            font-size: 16px;
-            color: #FFFFFF;
-            font-family: 'Source Sans Pro';
-            transition: 1s;
-        }
-
-        .getInTouch:hover {
-            color: #3F3F3F;
-            background-color: #FBA820;
+        100% {
+            opacity: 1;
         }
     }
 
-    .bottomPart {
-        margin: 80px 0px 0px 337px;
-        display: flex;
-        column-gap: 16px;
+}
 
-        img {
-            max-height: 24px;
-            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
+.middlePart {
+    padding: 204px 0px 0px 332px;
+
+    .helloIntro {
+        animation: helloIntro 2s forwards ease-out;
+        font-size: 60px;
+        font-weight: 700;
+        font-family: 'Source Sans Pro';
+        width: 380px;
+        color: white;
+
+        .name {
+            color: #FBA820;
         }
+    }
+
+    .shortStatement {
+        animation: shortStatement 2s forwards ease-out;
+        font-size: 18px;
+        font-family: 'Open Sans';
+        color: white;
+        width: 354px;
+    }
+
+    @keyframes helloIntro {
+        from {
+            opacity: 0;
+            transform: translateX(-50%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes shortStatement {
+        from {
+            opacity: 0;
+            transform: translateX(+50%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .getInTouch {
+        cursor: pointer;
+        width: 198px;
+        height: 60px;
+        border-radius: 33px;
+        border: 1px solid #FBA820;
+        background-color: transparent;
+        margin-top: 54px;
+        font-size: 16px;
+        color: #FFFFFF;
+        font-family: 'Source Sans Pro';
+        transition: 1s;
+    }
+
+    .getInTouch:hover {
+        color: #3F3F3F;
+        background-color: #FBA820;
+    }
+}
+
+.bottomPart {
+    margin: 80px 0px 0px 337px;
+    display: flex;
+    column-gap: 16px;
+
+    img {
+        max-height: 24px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
+    }
+}
+
+
+/* Computer view */
+@media only screen and (min-width:900px) {
+
+    .upperPart {
+
+        .menu {
+            i {
+                display: none;
+            }
+
+            .phoneViewMenu {
+                display: grid;
+                grid-template-columns: auto auto;
+
+                nav {
+                    display: flex;
+                    column-gap: 16px;
+                    justify-self: start;
+                    padding: 24px 0px 16px 0px;
+
+                }
+            }
+        }
+    }
+}
+
+/*phone & tablet view */
+@media only screen and (max-width:900px) {
+    .upperPart {
+
+        .menu {
+            justify-self: end;
+            cursor: pointer;
+            color: white;
+            position: relative;
+
+            .phoneViewMenu {
+                display: none;
+            }
+
+            i {
+                padding: 0px 32px 0px 0px;
+            }
+        }
+
+        .menu:hover .phoneViewMenu {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 0px;
+            width: fit-content;
+            height: 100vh;
+            padding: 40px 30px 40px 30px;
+            background-color: #3F3F3F;
+            display: grid;
+            grid-template-rows: auto auto;
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                text-align: center  ;
+                row-gap: 16px;
+            }
+
+            
+        }
+
     }
 }

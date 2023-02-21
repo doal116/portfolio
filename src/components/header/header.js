@@ -2,6 +2,8 @@ import github from './github.svg';
 import instagram from './instagram.svg';
 import linkedin from './linkedin.svg';
 import './header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 function scroller(elem) {
     let e = document.getElementById(elem);
     e.scrollIntoView({
@@ -17,12 +19,18 @@ function Header() {
                     <span className='firstName'>Alex</span>
                     <span className='LastName'>Bulganin</span>
                 </div>
-                <nav>
-                    <li onClick={()=>scroller('aboutMe')}>About</li>
-                    <li onClick={()=>scroller('certificates')}>Certifications</li>
-                    <li onClick={()=>scroller('portfolio')}>Portfolio</li>
-                </nav>
-                <button className='resume'>Resume</button>
+
+                <div className='menu'>
+                    <i><FontAwesomeIcon  icon={faBars} /></i>
+                    <div className='phoneViewMenu'>
+                        <nav>
+                            <li onClick={() => scroller('aboutMe')}>About</li>
+                            <li onClick={() => scroller('certificates')}>Certifications</li>
+                            <li onClick={() => scroller('portfolio')}>Portfolio</li>
+                        </nav>
+                        <button className='resume'>Resume</button>
+                    </div>
+                </div>
             </div>
             <div className='middlePart'>
                 <div className='intro' >
