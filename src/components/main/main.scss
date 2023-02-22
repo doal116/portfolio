@@ -149,47 +149,51 @@
         column-gap: 20px;
         row-gap: 10px;
 
-        .certificateBox {
-            padding: 5px;
-            background-repeat: no-repeat;
-            cursor: pointer;
-            display: flex;
-            border-radius: 10px;
-
-            img {
-                border-radius: inherit;
-                position: absolute;
-                transition: filter 1s;
-            }
-
-            .certificateInfo {
-                margin-bottom: -5px;
-                width: 100%;
+        a {
+            text-decoration: none;
+            .certificateBox {
+                padding: 5px;
+                background-repeat: no-repeat;
+                cursor: pointer;
                 display: flex;
-                flex-direction: column;
-                align-self: flex-end;
-                font-family: 'Source Sans Pro';
-                padding: 10px 0px 16px 16px;
-                filter: brightness(100%);
-                background-color: #3F3F3F;
-                opacity: 0;
-                border-bottom-right-radius: 10px;
-                border-bottom-left-radius: 10px;
+                border-radius: 10px;
 
-                .name {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: white;
-
+                img {
+                    border-radius: inherit;
+                    position: absolute;
+                    transition: filter 1s;
                 }
 
-                .issuingOrg {
-                    align-self: flex-start;
-                    color: rgb(255, 255, 255);
-                }
+                .certificateInfo {
+                    margin-bottom: -5px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-self: flex-end;
+                    font-family: 'Source Sans Pro';
+                    padding: 10px 0px 16px 16px;
+                    filter: brightness(100%);
+                    background-color: #3F3F3F;
+                    opacity: 0;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
 
+                    .name {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: white;
+
+                    }
+
+                    .issuingOrg {
+                        align-self: flex-start;
+                        color: rgb(255, 255, 255);
+                    }
+
+                }
             }
         }
+
 
         .certificateBox:hover {
             img {

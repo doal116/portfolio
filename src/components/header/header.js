@@ -47,12 +47,11 @@ function Header() {
                 </div>
                 <button className='getInTouch'>GET IN TOUCH</button>
             </div>
-            <div className='bottomPart'>
-                
+            <ul className='bottomPart'>
                 <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'}/></a></li>
                 <li><a href="https://www.instagram.com/chartam_1/" target="__blank" ><img src={instagram} alt={'instagram logo'}/></a></li>
                 <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={linkedin} alt={'linkedin logo'}/></a></li>
-            </div>
+            </ul>
         </header>
     )
 }

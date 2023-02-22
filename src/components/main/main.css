@@ -127,19 +127,22 @@
        column-gap: 20px;
   row-gap: 10px;
 }
-#certificates .certificateDisplay .certificateBox {
+#certificates .certificateDisplay a {
+  text-decoration: none;
+}
+#certificates .certificateDisplay a .certificateBox {
   padding: 5px;
   background-repeat: no-repeat;
   cursor: pointer;
   display: flex;
   border-radius: 10px;
 }
-#certificates .certificateDisplay .certificateBox img {
+#certificates .certificateDisplay a .certificateBox img {
   border-radius: inherit;
   position: absolute;
   transition: filter 1s;
 }
-#certificates .certificateDisplay .certificateBox .certificateInfo {
+#certificates .certificateDisplay a .certificateBox .certificateInfo {
   margin-bottom: -5px;
   width: 100%;
   display: flex;
@@ -153,12 +156,12 @@
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-#certificates .certificateDisplay .certificateBox .certificateInfo .name {
+#certificates .certificateDisplay a .certificateBox .certificateInfo .name {
   font-size: 24px;
   font-weight: bold;
   color: white;
 }
-#certificates .certificateDisplay .certificateBox .certificateInfo .issuingOrg {
+#certificates .certificateDisplay a .certificateBox .certificateInfo .issuingOrg {
   align-self: flex-start;
   color: rgb(255, 255, 255);
 }
