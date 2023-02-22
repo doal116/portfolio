@@ -1,5 +1,5 @@
-footer{
-    
+footer {
+
     height: fit-content;
     width: 100%;
     background-color: #252525;
@@ -7,7 +7,7 @@ footer{
     display: grid;
     grid-template-rows: auto auto;
 
-    .upperPart{
+    .upperPart {
         width: fit-content;
         height: fit-content;
         color: white;
@@ -17,39 +17,47 @@ footer{
         display: flex;
         flex-direction: column;
         row-gap: 24px;
-        span{
+
+        span {
             text-align: center;
             font-size: 72px;
         }
-        p{
+
+        p {
             width: 60%;
             font-size: 18px;
             text-align: center;
             align-self: center;
         }
-        button {
+
+        a {
             align-self: center;
-            width: 150px;
-            cursor: pointer;
-            justify-self: center;
-            border-radius: 33px;
-            font-size: 20px;
-            transition: 1s;
-            color: #ffb641;
-            font-weight: bold;
-            padding: 10px 16px 10px 16px;
-            border: 1px solid #FBA820;
-            font-family: 'Source Sans Pro';
-            background-color: transparent;
+
+            button {
+
+                width: 150px;
+                cursor: pointer;
+                justify-self: center;
+                border-radius: 33px;
+                font-size: 20px;
+                transition: 1s;
+                color: #ffb641;
+                font-weight: bold;
+                padding: 10px 16px 10px 16px;
+                border: 1px solid #FBA820;
+                font-family: 'Source Sans Pro';
+                background-color: transparent;
+            }
+
+            button:hover {
+                color: #3F3F3F;
+                background-color: #FBA820;
+            }
         }
 
-        button:hover {
-            color: #3F3F3F;
-            background-color: #FBA820;
-        }
     }
 
-    .lowerPart{
+    .lowerPart {
         width: 70%;
         height: 50px;
         border-top: 1px solid #3E3E3E;
@@ -57,24 +65,29 @@ footer{
         display: grid;
         grid-template-columns: auto auto;
         align-items: center;
-        .copyright{
+
+        .copyright {
             justify-self: start;
             color: #ABABAB;
-            .brand{
+
+            .brand {
                 color: white;
             }
         }
-        img{
+
+        img {
             justify-self: end;
             width: 200px;
         }
+
         align-self: end;
 
     }
 }
-@media (max-width:1024px){
-    footer{
-        .lowerPart{
+
+@media (max-width:1024px) {
+    footer {
+        .lowerPart {
             display: flex;
             flex-wrap: wrap;
             row-gap: 20px;

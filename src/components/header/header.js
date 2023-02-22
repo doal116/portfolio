@@ -4,6 +4,8 @@ import linkedin from './linkedin.svg';
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import alexBulganinCv from '../alexBulganinCv.pdf';
+
 function scroller(elem) {
     let e = document.getElementById(elem);
     e.scrollIntoView({
@@ -28,7 +30,7 @@ function Header() {
                             <li onClick={() => scroller('certificates')}>Certifications</li>
                             <li onClick={() => scroller('portfolio')}>Portfolio</li>
                         </nav>
-                        <button className='resume'>Resume</button>
+                        <a href={alexBulganinCv} target="__blank" ><button className='resume'>Resume</button></a>
                     </div>
                 </div>
             </div>
@@ -46,9 +48,10 @@ function Header() {
                 <button className='getInTouch'>GET IN TOUCH</button>
             </div>
             <div className='bottomPart'>
-                <img src={github} alt={'github logo'}></img>
-                <img src={instagram} alt={'instagram logo'}></img>
-                <img src={linkedin} alt={'linkedin logo'}></img>
+                
+                <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'}/></a></li>
+                <li><a href="https://www.instagram.com/chartam_1/" target="__blank" ><img src={instagram} alt={'instagram logo'}/></a></li>
+                <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={linkedin} alt={'linkedin logo'}/></a></li>
             </div>
         </header>
     )

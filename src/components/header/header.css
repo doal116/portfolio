@@ -1,5 +1,5 @@
 header {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #3F3F3F;
   display: flex;
@@ -53,7 +53,11 @@ header .upperPart .menu .phoneViewMenu nav li:hover {
   border-bottom-right-radius: 1px;
   padding: 0px 0px 8px 0px;
 }
-header .upperPart .menu .phoneViewMenu .resume {
+header .upperPart .menu .phoneViewMenu a {
+  align-self: center;
+  justify-self: start;
+}
+header .upperPart .menu .phoneViewMenu a .resume {
   cursor: pointer;
   padding: 10px 16px 10px 16px;
   border-radius: 33px;
@@ -66,10 +70,8 @@ header .upperPart .menu .phoneViewMenu .resume {
   transition: 1s;
   height: -moz-fit-content;
   height: fit-content;
-  align-self: center;
-  justify-self: start;
 }
-header .upperPart .menu .phoneViewMenu .resume:hover {
+header .upperPart .menu .phoneViewMenu a .resume:hover {
   color: #3F3F3F;
   background-color: #FBA820;
 }
@@ -158,7 +160,8 @@ header .bottomPart {
   -moz-column-gap: 16px;
        column-gap: 16px;
 }
-header .bottomPart img {
+header .bottomPart li a img {
+  cursor: pointer;
   max-height: 24px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
 }

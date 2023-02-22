@@ -30,8 +30,10 @@ footer .upperPart p {
   text-align: center;
   align-self: center;
 }
-footer .upperPart button {
+footer .upperPart a {
   align-self: center;
+}
+footer .upperPart a button {
   width: 150px;
   cursor: pointer;
   justify-self: center;
@@ -45,7 +47,7 @@ footer .upperPart button {
   font-family: "Source Sans Pro";
   background-color: transparent;
 }
-footer .upperPart button:hover {
+footer .upperPart a button:hover {
   color: #3F3F3F;
   background-color: #FBA820;
 }

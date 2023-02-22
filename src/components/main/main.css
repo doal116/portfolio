@@ -262,10 +262,10 @@
   }
   #certificates .certificateDisplay .certificateBox {
     height: 280px;
-    width: 360px;
+    width: 80vw;
   }
   #certificates .certificateDisplay .certificateBox img {
-    max-width: 360px;
+    max-width: 80vw;
   }
   #portfolio p {
     width: 90vw;

@@ -12,6 +12,7 @@ import responsiveWebDesign from './responsiveWebDesign.jpg';
 import relationalDatabase from './relationalDatabase.jpg';
 import frontEndLibraries from './frontEndLibraries.jpg';
 import javaScriptAlgo from './javascript.jpg';
+import alexBulganinCv from '../alexBulganinCv.pdf';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -108,11 +109,12 @@ const AboutMe = () => {
             <div className="info">
                 <div className='leftSide'>
                     <h1>About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dapib eu placerat at nisl posuere aliquet amet pharetra malesuada. Spendisse nisl ac at tortor. Sit faucibus suspendisse risus vulputate pulvinar cursus suspendisse risus vulputate  enim pharetra eu. </p>
-                    <p>Sit faucibus suspendisse risus vulputate pulvinar cursus enim hareta  eu. Sagittis enim morb. Suspendisse risus.</p>
+                    <p>I'm an eager and meticulous front-end developer looking for an entry-level position with a company to put my coding abilities to use, solve challenging issues, and aid in a prompt completion of projects.</p>
+                    <p>I'm also interested in backend development and would like to be build a proficiency in that area.</p>
                     <div className='hireCv'>
-                        <button className='hireMe'>HIRE ME</button>
-                        <button className='downloadCv'>DOWNLOAD CV</button>
+                        <a href="mailto:bulganinbralex@yahoo.com" ><button className='hireMe' >HIRE ME</button></a>
+                        <a href={alexBulganinCv} target="__blank" >
+                            <button className='downloadCv'>DOWNLOAD CV</button></a>
                     </div>
                 </div>
                 <div className='rightSide'>
