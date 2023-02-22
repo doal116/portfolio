@@ -1,6 +1,9 @@
 header {
-    height: 760px;
+    width: 100vw;
+    height: 100vh;
     background-color: #3F3F3F;
+    display: flex;
+    flex-direction: column;
 
     .upperPart {
         z-index: 1;
@@ -11,14 +14,12 @@ header {
         align-items: center;
         animation: upperPart 3s forwards ease-out;
         background-color: #3F3F3F;
-        width: 100%;
+        width: 100vw;
 
         .webDevName {
             justify-self: center;
             padding: 16px 0px 16px 0px;
-            display: flex;
-            column-gap: 8px;
-
+            position: relative;
             %commonTypographyNameStyle {
                 font-size: 44px;
                 font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
@@ -34,6 +35,9 @@ header {
                 @extend %commonTypographyNameStyle;
                 color: #FFFFFF;
                 font-weight: 500;
+                position: absolute;
+                left: 15px;
+                z-index: -1;
             }
         }
 
@@ -64,7 +68,6 @@ header {
                 .resume {
                     cursor: pointer;
                     padding: 10px 16px 10px 16px;
-                    justify-self: center;
                     border-radius: 33px;
                     border: 1px solid #FBA820;
                     background-color: transparent;
@@ -75,6 +78,7 @@ header {
                     transition: 1s;
                     height: fit-content;
                     align-self: center;
+                    justify-self: start;
                 }
 
                 .resume:hover {
@@ -100,154 +104,211 @@ header {
         }
     }
 
+    .middlePart {
+        width: fit-content;
+
+        .helloIntro {
+            animation: helloIntro 2s forwards ease-out;
+            font-size: 60px;
+            font-weight: 700;
+            font-family: 'Source Sans Pro';
+            color: white;
+
+            .name {
+                color: #FBA820;
+            }
+        }
+
+        .shortStatement {
+            animation: shortStatement 2s forwards ease-out;
+            font-size: 18px;
+            font-family: 'Open Sans';
+            color: white;
+        }
+
+        @keyframes helloIntro {
+            from {
+                opacity: 0;
+                transform: translateX(-50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes shortStatement {
+            from {
+                opacity: 0;
+                transform: translateX(+50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .getInTouch {
+            cursor: pointer;
+            width: 198px;
+            height: 60px;
+            border-radius: 33px;
+            border: 1px solid #FBA820;
+            background-color: transparent;
+            margin-top: 54px;
+            font-size: 16px;
+            color: #FFFFFF;
+            font-family: 'Source Sans Pro';
+            transition: 1s;
+            animation: getInTouch 1.5s forwards ease-in;
+        }
+
+        @keyframes getInTouch {
+            from {
+                opacity: 0;
+                transform: translatey(+50%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translatey(0);
+            }
+        }
+
+        .getInTouch:hover {
+            color: #3F3F3F;
+            background-color: #FBA820;
+        }
+
+    }
+
+    .bottomPart {
+        display: flex;
+        column-gap: 16px;
+
+        img {
+            max-height: 24px;
+            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
+        }
+    }
 }
 
-.middlePart {
-    padding: 204px 0px 0px 332px;
 
-    .helloIntro {
-        animation: helloIntro 2s forwards ease-out;
-        font-size: 60px;
-        font-weight: 700;
-        font-family: 'Source Sans Pro';
-        width: 380px;
-        color: white;
 
-        .name {
-            color: #FBA820;
-        }
-    }
 
-    .shortStatement {
-        animation: shortStatement 2s forwards ease-out;
-        font-size: 18px;
-        font-family: 'Open Sans';
-        color: white;
-        width: 354px;
-    }
-
-    @keyframes helloIntro {
-        from {
-            opacity: 0;
-            transform: translateX(-50%);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes shortStatement {
-        from {
-            opacity: 0;
-            transform: translateX(+50%);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    .getInTouch {
-        cursor: pointer;
-        width: 198px;
-        height: 60px;
-        border-radius: 33px;
-        border: 1px solid #FBA820;
-        background-color: transparent;
-        margin-top: 54px;
-        font-size: 16px;
-        color: #FFFFFF;
-        font-family: 'Source Sans Pro';
-        transition: 1s;
-    }
-
-    .getInTouch:hover {
-        color: #3F3F3F;
-        background-color: #FBA820;
-    }
-}
-
-.bottomPart {
-    margin: 80px 0px 0px 337px;
-    display: flex;
-    column-gap: 16px;
-
-    img {
-        max-height: 24px;
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
-    }
-}
 
 
 /* Computer view */
-@media only screen and (min-width:900px) {
+@media only screen and (min-width:1024px) {
+    header {
+        .upperPart {
 
-    .upperPart {
+            .menu {
+                i {
+                    display: none;
+                }
 
-        .menu {
-            i {
-                display: none;
-            }
+                .phoneViewMenu {
+                    display: grid;
+                    grid-template-columns: auto auto;
 
-            .phoneViewMenu {
-                display: grid;
-                grid-template-columns: auto auto;
+                    nav {
+                        display: flex;
+                        column-gap: 16px;
+                        justify-self: start;
+                        padding: 24px 0px 16px 0px;
 
-                nav {
-                    display: flex;
-                    column-gap: 16px;
-                    justify-self: start;
-                    padding: 24px 0px 16px 0px;
-
+                    }
                 }
             }
         }
+
+        .middlePart {
+            padding-top: 180px;
+            margin-left: 20%;
+
+            .helloIntro {
+                width: 375px;
+            }
+
+            .shortStatement {
+                width: 354px;
+            }
+        }
+
+        .bottomPart {
+            margin: 100px 0px 0px 20%;
+        }
     }
+
 }
 
 /*phone & tablet view */
-@media only screen and (max-width:900px) {
-    .upperPart {
+@media only screen and (max-width:1024px) {
+    header {
+        
+        width: 100vw;
+        .upperPart {
+            .menu {
+                justify-self: end;
+                cursor: pointer;
+                color: white;
+                position: relative;
 
-        .menu {
+                .phoneViewMenu {
+                    display: none;
+                }
+
+                i {
+                    padding: 0px 80px 0px 0px;
+                }
+            }
+
+            .menu:hover .phoneViewMenu {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 0px;
+                width: fit-content;
+                height: 100vh;
+                padding: 40px 30px 40px 30px;
+                background-color: #3F3F3F;
+                display: grid;
+                grid-template-rows: auto auto;
+
+                nav {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    row-gap: 16px;
+                }
+
+
+            }
+
+        }
+
+        .middlePart {
             justify-self: end;
-            cursor: pointer;
-            color: white;
-            position: relative;
-
-            .phoneViewMenu {
-                display: none;
+            align-self: center;
+            padding: 200px 0px 0px 0px;
+            margin:0px 24px 0px 24px;
+            .helloIntro {
+                width: 95%;
             }
 
-            i {
-                padding: 0px 32px 0px 0px;
+            .shortStatement {
+                width: 95%;
             }
         }
 
-        .menu:hover .phoneViewMenu {
-            display: block;
-            position: absolute;
-            top: 20px;
-            right: 0px;
-            width: fit-content;
-            height: 100vh;
-            padding: 40px 30px 40px 30px;
-            background-color: #3F3F3F;
-            display: grid;
-            grid-template-rows: auto auto;
-
-            nav {
-                display: flex;
-                flex-direction: column;
-                text-align: center  ;
-                row-gap: 16px;
-            }
-
-            
+        .bottomPart {   
+            margin:100px 0px 0px 24px;
+            align-self: start;
+            justify-self: end;
         }
-
     }
+
 }

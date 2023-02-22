@@ -5,12 +5,9 @@
         margin: 100px auto auto auto;
         height: fit-content;
         width: fit-content;
-        display: grid;
-        grid-template-columns: 50% auto;
         column-gap: 30px;
 
         .leftSide {
-            width: 531px;
 
             %buttonsCommonDesign {
                 cursor: pointer;
@@ -57,7 +54,6 @@
 
         .rightSide {
             position: relative;
-            width: 440px;
             justify-self: end;
 
             .skills {
@@ -147,20 +143,14 @@
     }
 
     .certificateDisplay {
-        margin: 50px auto 0px auto;
+        display: block;
+        margin: 0px auto 0px auto;
         width: fit-content;
-        display: grid;
-        grid-template-columns: auto auto auto;
         column-gap: 20px;
         row-gap: 10px;
 
         .certificateBox {
-            width: 350px;
-            height: fit-content;
             padding: 5px;
-            height: 300px;
-            width: 380px;
-            background-size: 390px;
             background-repeat: no-repeat;
             cursor: pointer;
             display: flex;
@@ -169,8 +159,6 @@
             img {
                 border-radius: inherit;
                 position: absolute;
-                max-width: 380px;
-
                 transition: filter 1s;
             }
 
@@ -238,7 +226,10 @@
 
     .portfolioDisplay {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         column-gap: 24px;
+        row-gap: 24px;
         width: fit-content;
         margin: 0px auto 0px auto;
         padding: 50px 0px 50px 0px;
@@ -254,9 +245,98 @@
                 font-size: 25px;
             }
 
-            img{
+            img {
                 max-width: 300px;
             }
         }
     }
 }
+
+/* Different view sizing */
+/* computer view */
+@media (min-width:1024px) {
+    #aboutMe {
+        .info {
+            display: grid;
+            grid-template-columns: 50% auto;
+
+            .leftSide {
+                width: 531px;
+            }
+
+            .rightSide {
+                width: 440px;
+            }
+        }
+    }
+
+    #certificates {
+        .certificateDisplay {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .certificateBox {
+                height: 300px;
+                width: 380px;
+
+                img {
+
+                    max-width: 380px;
+                }
+            }
+        }
+    }
+}
+
+/* phone and table view*/
+
+@media (max-width:1024px) {
+    #aboutMe {
+        width: auto;
+
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+
+            .leftSide {
+                margin: 0px 24px 0px 24px;
+                width: auto;
+            }
+
+            .rightSide {
+                width: 90vw;
+                margin: 0px auto 0px auto;
+            }
+        }
+    }
+
+    #certificates {
+        .certificateDisplay {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .certificateBox {
+
+                height: 280px;
+                width: 360px;
+
+                img {
+
+                    max-width: 360px;
+                }
+            }
+        }
+    }
+
+    #portfolio {
+        p {
+            width: 90vw;
+        }
+    }
+
+}
+
+/*----------------------*/

@@ -16,8 +16,8 @@ function Header() {
         <header>
             <div className="upperPart">
                 <div className="webDevName">
-                    <span className='firstName'>Alex</span>
-                    <span className='LastName'>Bulganin</span>
+                    <span className='firstName'>A</span>
+                    <span className='LastName'>B</span>
                 </div>
 
                 <div className='menu'>

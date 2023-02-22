@@ -7,13 +7,8 @@
   height: fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  display: grid;
-  grid-template-columns: 50% auto;
   -moz-column-gap: 30px;
        column-gap: 30px;
-}
-#aboutMe .info .leftSide {
-  width: 531px;
 }
 #aboutMe .info .leftSide .hireCv .downloadCv, #aboutMe .info .leftSide .hireCv .hireMe {
   cursor: pointer;
@@ -52,7 +47,6 @@
 }
 #aboutMe .info .rightSide {
   position: relative;
-  width: 440px;
   justify-self: end;
 }
 #aboutMe .info .rightSide .skills {
@@ -125,23 +119,16 @@
   font-family: "Source Sans Pro";
 }
 #certificates .certificateDisplay {
-  margin: 50px auto 0px auto;
+  display: block;
+  margin: 0px auto 0px auto;
   width: -moz-fit-content;
   width: fit-content;
-  display: grid;
-  grid-template-columns: auto auto auto;
   -moz-column-gap: 20px;
        column-gap: 20px;
   row-gap: 10px;
 }
 #certificates .certificateDisplay .certificateBox {
-  width: 350px;
-  height: -moz-fit-content;
-  height: fit-content;
   padding: 5px;
-  height: 300px;
-  width: 380px;
-  background-size: 390px;
   background-repeat: no-repeat;
   cursor: pointer;
   display: flex;
@@ -150,7 +137,6 @@
 #certificates .certificateDisplay .certificateBox img {
   border-radius: inherit;
   position: absolute;
-  max-width: 380px;
   transition: filter 1s;
 }
 #certificates .certificateDisplay .certificateBox .certificateInfo {
@@ -202,8 +188,11 @@
 }
 #portfolio .portfolioDisplay {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   -moz-column-gap: 24px;
        column-gap: 24px;
+  row-gap: 24px;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0px auto 0px auto;
@@ -221,4 +210,65 @@
 }
 #portfolio .portfolioDisplay .projectBox img {
   max-width: 300px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* Different view sizing */
+/* computer view */
+@media (min-width: 1024px) {
+  #aboutMe .info {
+    display: grid;
+    grid-template-columns: 50% auto;
+  }
+  #aboutMe .info .leftSide {
+    width: 531px;
+  }
+  #aboutMe .info .rightSide {
+    width: 440px;
+  }
+  #certificates .certificateDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #certificates .certificateDisplay .certificateBox {
+    height: 300px;
+    width: 380px;
+  }
+  #certificates .certificateDisplay .certificateBox img {
+    max-width: 380px;
+  }
+}
+/* phone and table view*/
+@media (max-width: 1024px) {
+  #aboutMe {
+    width: auto;
+  }
+  #aboutMe .info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #aboutMe .info .leftSide {
+    margin: 0px 24px 0px 24px;
+    width: auto;
+  }
+  #aboutMe .info .rightSide {
+    width: 90vw;
+    margin: 0px auto 0px auto;
+  }
+  #certificates .certificateDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #certificates .certificateDisplay .certificateBox {
+    height: 280px;
+    width: 360px;
+  }
+  #certificates .certificateDisplay .certificateBox img {
+    max-width: 360px;
+  }
+  #portfolio p {
+    width: 90vw;
+  }
+}
+/*----------------------*//*# sourceMappingURL=main.css.map */
