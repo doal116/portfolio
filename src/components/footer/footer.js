@@ -1,5 +1,5 @@
 import './footer.css';
-import footerSocial from './footerSocial.svg';
+import footerSocial from '../svg/footerSocial.svg';
 function Footer() {
     return (
         <footer>

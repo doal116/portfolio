@@ -1,6 +1,6 @@
-import github from './github.svg';
-import instagram from './instagram.svg';
-import linkedin from './linkedin.svg';
+import github from '../svg/github.svg';
+import instagram from '../svg/instagram.svg';
+import linkedin from '../svg/linkedin.svg';
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';

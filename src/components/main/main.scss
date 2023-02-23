@@ -1,11 +1,10 @@
 #aboutMe {
-    padding-bottom: 100px;
+    padding-bottom: 64px;
 
     .info {
         margin: 100px auto auto auto;
         height: fit-content;
         width: fit-content;
-        column-gap: 30px;
 
         .leftSide {
 
@@ -151,6 +150,7 @@
 
         a {
             text-decoration: none;
+
             .certificateBox {
                 padding: 5px;
                 background-repeat: no-repeat;
@@ -294,14 +294,62 @@
 }
 
 /* phone and table view*/
-
-@media (max-width:1024px) {
+@media (max-width:482px) {
     #aboutMe {
         width: auto;
 
         .info {
             display: flex;
             flex-wrap: wrap;
+            row-gap: 32px;
+
+            .leftSide {
+                margin: 0px 24px 0px 24px;
+                width: auto;
+            }
+
+            .rightSide {
+                width: 220px;
+                margin: 0px auto 0px auto;
+            }
+        }
+    }
+
+    #certificates {
+        .certificateDisplay {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 32px;
+            .certificateBox {
+
+                height: 285px;
+                width: 80vw;
+
+                img {
+
+                    max-width: 80vw;
+                }
+            }
+        }
+    }
+
+    #portfolio {
+        p {
+            width: 90vw;
+        }
+    }
+}
+
+@media (min-width:482px) and (max-width:1024px) {
+    #aboutMe {
+        width: auto;
+
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 24px;
 
             .leftSide {
                 margin: 0px 24px 0px 24px;
@@ -322,14 +370,15 @@
             flex-wrap: wrap;
             justify-content: center;
 
+            row-gap: 32px;
             .certificateBox {
 
-                height: 280px;
-                width: 80vw;
+                height: 250px;
+                width: 320px;
 
                 img {
 
-                    max-width: 80vw;
+                    max-width: 320px;
                 }
             }
         }
