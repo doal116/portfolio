@@ -82,6 +82,7 @@ footer {
             list-style-type: none;
             img{
                 width: 20px;
+                height: fit-content;
                 filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
             }
         }
@@ -97,7 +98,7 @@ footer {
             display: flex;
             flex-wrap: wrap;
             row-gap: 20px;
-            padding-bottom: 24px;
+            padding-bottom: 30px;
             justify-content: center;
         }
     }

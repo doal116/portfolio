@@ -12,11 +12,11 @@ function Footer() {
             </div>
             <div className='lowerPart'>
                 <span className='copyright'>© {new Date().getFullYear()} <span className='brand'>Alex Bulganin</span>. All rights reserved</span>
-                <ul className='socialMedia'>
-                    <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'} /></a></li>
-                    <li><a href="https://www.instagram.com/chartam_1/" target="__blank" ><img src={instagram} alt={'instagram logo'} /></a></li>
-                    <li><a href="https://www.linkedin.com/in/alex-bulganin-00740525b/" target="__blank" ><img src={linkedin} alt={'linkedin logo'} /></a></li>
-                </ul>
+                <div className='socialMedia'>
+                    <a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'} /></a>
+                    <a href="https://www.instagram.com/chartam_1/" target="__blank" ><img src={instagram} alt={'instagram logo'} /></a>
+                    <a href="https://www.linkedin.com/in/alex-bulganin-00740525b/" target="__blank" ><img src={linkedin} alt={'linkedin logo'} /></a>
+                </div>
             </div>
         </footer>
     )

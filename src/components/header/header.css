@@ -214,7 +214,7 @@ header .bottomPart li img {
   }
 }
 /*phone & tablet view */
-@media only screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   header {
     width: 100vw;
   }
@@ -233,15 +233,16 @@ header .bottomPart li img {
   header .upperPart .menu:hover .phoneViewMenu {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 40px;
     right: 0px;
     width: -moz-fit-content;
     width: fit-content;
-    height: 100vh;
+    height: 90vh;
     padding: 40px 30px 40px 30px;
     background-color: #3F3F3F;
     display: grid;
     grid-template-rows: auto auto;
+    box-shadow: 1px 15px 10px black;
   }
   header .upperPart .menu:hover .phoneViewMenu nav {
     display: flex;
