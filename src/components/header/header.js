@@ -50,7 +50,7 @@ function Header() {
             <ul className='bottomPart'>
                 <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'}/></a></li>
                 <li><a href="https://www.instagram.com/chartam_1/" target="__blank" ><img src={instagram} alt={'instagram logo'}/></a></li>
-                <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={linkedin} alt={'linkedin logo'}/></a></li>
+                <li><a href="https://www.linkedin.com/in/alex-bulganin-00740525b/" target="__blank" ><img src={linkedin} alt={'linkedin logo'}/></a></li>
             </ul>
         </header>
     )

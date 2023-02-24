@@ -75,9 +75,15 @@ footer {
             }
         }
 
-        img {
+        .socialMedia {
             justify-self: end;
-            width: 200px;
+            display: flex;
+            column-gap: 10px;
+            list-style-type: none;
+            img{
+                width: 20px;
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
+            }
         }
 
         align-self: end;

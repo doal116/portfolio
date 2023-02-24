@@ -68,9 +68,16 @@ footer .lowerPart .copyright {
 footer .lowerPart .copyright .brand {
   color: white;
 }
-footer .lowerPart img {
+footer .lowerPart .socialMedia {
   justify-self: end;
-  width: 200px;
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  list-style-type: none;
+}
+footer .lowerPart .socialMedia img {
+  width: 20px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(290deg) brightness(101%) contrast(104%);
 }
 
 @media (max-width: 1024px) {
