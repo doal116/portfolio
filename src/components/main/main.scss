@@ -54,6 +54,7 @@
         .rightSide {
             position: relative;
             justify-self: end;
+            margin-left: 30px;
 
             .skills {
                 display: flex;
@@ -89,6 +90,7 @@
                     }
                 }
             }
+
 
             .skills::-webkit-scrollbar {
                 background-color: transparent;
@@ -237,12 +239,20 @@
         width: fit-content;
         margin: 0px auto 0px auto;
         padding: 50px 0px 50px 0px;
-
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
         .projectBox {
-
+            border: 1px solid #bdbdbd;
+            cursor: pointer;
             width: 300px;
             height: fit-content;
-            box-shadow: 1px 1px 10px #929292;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: width 0.5s;
             padding: 20px 10px 30px 10px;
 
             .name {
@@ -252,6 +262,23 @@
             img {
                 max-width: 300px;
             }
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .description{
+                    text-align: center;
+                    display: block;
+                    width: 280px;
+                    height: fit-content;
+                }
+            }
+        }
+
+        .projectBox:hover{
+            width: 310px;
+            height: fit-content+10px;
+            box-shadow: 1px 1px 10px #676767;
         }
     }
 }
@@ -269,7 +296,7 @@
             }
 
             .rightSide {
-                width: 440px;
+                width: 430px;
             }
         }
     }
@@ -322,6 +349,7 @@
             flex-wrap: wrap;
             justify-content: center;
             row-gap: 32px;
+
             .certificateBox {
 
                 height: 285px;
@@ -371,6 +399,7 @@
             justify-content: center;
 
             row-gap: 32px;
+
             .certificateBox {
 
                 height: 250px;

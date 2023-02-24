@@ -8,6 +8,8 @@ import C from '../svg/c.svg';
 import node from '../svg/node.svg';
 import mongodb from '../svg/mongodb.svg';
 import ecommerce from './ecommerce.jpg';
+import markDownEditor from './markdownEditor.jpg';
+import technicalDocumentationPage from './technicalDocumentationPage.jpg';
 import responsiveWebDesign from '../certifications/responsiveWebDesign.jpg';
 import relationalDatabase from '../certifications/relationalDatabase.jpg';
 import frontEndLibraries from '../certifications/frontEndLibraries.jpg';
@@ -18,37 +20,33 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faChevronLeft, faChevronRight
 } from "@fortawesome/free-solid-svg-icons";
+import propTypes from 'prop-types';
 import { useEffect } from 'react';
-import propTypes  from 'prop-types';
 
 const gotToRight = () => {
     document.getElementById(
         'skills'
-    ).scrollLeft += 230;
+    ).scrollLeft += 228;
 }
 const gotToLeft = () => {
     document.getElementById(
         'skills'
-    ).scrollLeft -= 230;
+    ).scrollLeft -= 228;
 }
 //----------About Me Section-----------//
 //----------------------------------------//
-const Skills = ({ skills }) => {
-    return (
-        <div className='skills' id='skills'>
-            {
-                skills.map((skill, i) =>
-                    <div className='skill' key={i.toString()}>
-                        <img src={skill['image']} alt={`${skill['name']} logo`}></img>
-                        <span>{skill['name']}</span>
-                        <span className='experience'>{skill['experience']}</span>
-                    </div>
-                )
-            }
-        </div>
+const Skills = ({ skills }) => <div className='skills' id='skills'>
+    {
+        skills.map((skill, i) =>
+            <div className='skill' key={i.toString()}>
+                <img src={skill['image']} alt={`${skill['name']} logo`}></img>
+                <span>{skill['name']}</span>
+                <span className='experience'>{skill['experience']}</span>
+            </div>
+        )
+    }
+</div>;
 
-    )
-}
 const AboutMe = ({ skills }) => {
 
     useEffect(() => {
@@ -64,7 +62,6 @@ const AboutMe = ({ skills }) => {
                 right = true;
         }, 3500);
     });
-
     return (
         <section id="aboutMe">
             <div className="info">
@@ -132,19 +129,21 @@ CertificateBox.propTypes = {
 //---------------------------------------//
 const PortfolioBox = ({ portfolio }) =>
     portfolio.map((elem, i) =>
-        <div className='projectBox' key={i.toString()}>
-            <img src={elem['image']} alt="project Display"></img>
-            <div>
-                <h2 className='name'>{elem['name']}</h2>
-                <span className='description'>{elem['description']}</span>
+        <a href={elem['link']}>
+            <div className='projectBox' key={i.toString()}>
+                <img src={elem['image']} alt="project Display"></img>
+                <div>
+                    <h2 className='name'>{elem['name']}</h2>
+                    <span className='description'>{elem['description']}</span>
+                </div>
             </div>
-        </div>
+        </a>
     );
 const Portfolio = ({ portfolio }) => {
     return (
         <section id='portfolio'>
             <h1>Portfolio</h1>
-            <p>The projects that are currently finished and those that are being built are listed below.</p>
+            <p>The projects I have completed and those I am working on are listed below.</p>
             <div className='portfolioDisplay'>
                 <PortfolioBox portfolio={portfolio} />
             </div>
@@ -229,8 +228,21 @@ function Main() {
     const portfolio = [
         {
             name: 'E-commerce website',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci eget mi elit cursus donec amet sed sagittis.',
-            image: ecommerce
+            description: 'The development of this online store is ongoing. The objective is to create a responsive, front-end and back-end integrated e-commerce website.',
+            image: ecommerce,
+            link:'https://github.com/doal116/e-commerce-react-website'
+        },
+        {
+            name: 'React MarkDownEditor',
+            description: 'Markdown Previewer that was built using HTML, JavaScript, SASSY CSS, and React.',
+            image: markDownEditor,
+            link:'https://codepen.io/chartam1/full/abYxOqy'
+        },
+        {
+            name:'Technical Documentation Page',
+            description:'Simple Technical Documentation page Built using just HTML and CSS.',
+            image:technicalDocumentationPage,
+            link:'https://codepen.io/chartam1/full/PodzggK'
         }
     ];
     return (

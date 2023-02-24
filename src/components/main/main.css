@@ -46,6 +46,7 @@
 #aboutMe .info .rightSide {
   position: relative;
   justify-self: end;
+  margin-left: 30px;
 }
 #aboutMe .info .rightSide .skills {
   display: flex;
@@ -199,11 +200,21 @@
   margin: 0px auto 0px auto;
   padding: 50px 0px 50px 0px;
 }
+#portfolio .portfolioDisplay a {
+  text-decoration: none;
+  color: inherit;
+}
 #portfolio .portfolioDisplay .projectBox {
+  border: 1px solid #bdbdbd;
+  cursor: pointer;
   width: 300px;
   height: -moz-fit-content;
   height: fit-content;
-  box-shadow: 1px 1px 10px #929292;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.5s;
   padding: 20px 10px 30px 10px;
 }
 #portfolio .portfolioDisplay .projectBox .name {
@@ -211,6 +222,23 @@
 }
 #portfolio .portfolioDisplay .projectBox img {
   max-width: 300px;
+}
+#portfolio .portfolioDisplay .projectBox div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#portfolio .portfolioDisplay .projectBox div .description {
+  text-align: center;
+  display: block;
+  width: 280px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+#portfolio .portfolioDisplay .projectBox:hover {
+  width: 310px;
+  height: fit-content10px;
+  box-shadow: 1px 1px 10px #676767;
 }
 
 /* Different view sizing */
@@ -224,7 +252,7 @@
     width: 531px;
   }
   #aboutMe .info .rightSide {
-    width: 440px;
+    width: 430px;
   }
   #certificates .certificateDisplay {
     display: flex;
