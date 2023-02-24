@@ -185,7 +185,7 @@ header .bottomPart li img {
 
 /* Computer view */
 @media (min-width: 1024px) {
-  header .upperPart .menu i {
+  header .upperPart .menu .menuIcon {
     display: none;
   }
   header .upperPart .menu .phoneViewMenu {
