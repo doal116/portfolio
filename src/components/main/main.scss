@@ -19,6 +19,8 @@
 
             .hireCv {
                 display: flex;
+                flex-wrap: wrap;
+                row-gap: 20pxs;
                 column-gap: 22px;
 
                 .hireMe {

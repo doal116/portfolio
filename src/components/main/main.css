@@ -18,6 +18,8 @@
 }
 #aboutMe .info .leftSide .hireCv {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 20pxs;
   -moz-column-gap: 22px;
        column-gap: 22px;
 }
