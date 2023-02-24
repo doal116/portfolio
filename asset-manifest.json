@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5c4935fb.css",
+    "main.css": "/portfolio/static/css/main.6c30abdf.css",
     "main.js": "/portfolio/static/js/main.37097ff3.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/alexBulganinCv.pdf": "/portfolio/static/media/alexBulganinCv.852f52ffcc442f1b00fc.pdf",
@@ -23,12 +23,12 @@
     "static/media/mongodb.svg": "/portfolio/static/media/mongodb.e656a80023f3acbefc2b8e0a7bb83884.svg",
     "index.html": "/portfolio/index.html",
     "static/media/linkedin.svg": "/portfolio/static/media/linkedin.b97a678466ff5e1ca820f32acacd118c.svg",
-    "main.5c4935fb.css.map": "/portfolio/static/css/main.5c4935fb.css.map",
+    "main.6c30abdf.css.map": "/portfolio/static/css/main.6c30abdf.css.map",
     "main.37097ff3.js.map": "/portfolio/static/js/main.37097ff3.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c4935fb.css",
+    "static/css/main.6c30abdf.css",
     "static/js/main.37097ff3.js"
   ]
 }
