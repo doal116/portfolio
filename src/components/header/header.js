@@ -23,7 +23,7 @@ function Header() {
                 </div>
 
                 <div className='menu'>
-                    <i><FontAwesomeIcon  icon={faBars} /></i>
+                    <div className='menuIcon'><FontAwesomeIcon  icon={faBars} /></div>
                     <div className='phoneViewMenu'>
                         <nav>
                             <li onClick={() => scroller('aboutMe')}>About</li>
