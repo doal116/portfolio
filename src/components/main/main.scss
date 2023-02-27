@@ -58,7 +58,7 @@
             justify-self: end;
             margin-left: 30px;
 
-            width: 250px;
+            width: 220px;
             .skills {
                 width: inherit;
                 overflow-x: auto;
@@ -360,8 +360,8 @@
 /* phone and table view*/
 @media (max-width:482px) {
     #aboutMe {
-        width: auto;
 
+        align-items: center;
         .info {
             display: flex;
             flex-wrap: wrap;
@@ -406,19 +406,15 @@
 
 @media (min-width:482px) and (max-width:1024px) {
     #aboutMe {
-        width: auto;
-
         .info {
             display: flex;
+            flex-wrap: wrap;
             row-gap: 24px;
             width: 70%;
             .leftSide {
                 margin: 0px 24px 0px 24px;
             }
 
-            .rightSide {
-                margin: 0px auto 0px auto;
-            }
         }
     }
 
@@ -428,7 +424,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-
             row-gap: 32px;
 
             .certificateBox {
