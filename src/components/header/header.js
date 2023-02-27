@@ -1,5 +1,4 @@
 import github from '../svg/github.svg';
-import instagram from '../svg/instagram.svg';
 import linkedin from '../svg/linkedin.svg';
 import './header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -23,7 +22,7 @@ function Header() {
                 </div>
 
                 <div className='menu'>
-                    <div className='menuIcon'><FontAwesomeIcon  icon={faBars} /></div>
+                    <div className='menuIcon'><FontAwesomeIcon icon={faBars} /></div>
                     <div className='phoneViewMenu'>
                         <nav>
                             <li onClick={() => scroller('aboutMe')}>About</li>
@@ -45,12 +44,11 @@ function Header() {
                         Quality work is my priority.
                     </div>
                 </div>
-                <button className='getInTouch'>GET IN TOUCH</button>
+                <a href='mailto:bulganinbralex@yahoo.com'><button className='getInTouch'>GET IN TOUCH</button></a>
             </div>
             <ul className='bottomPart'>
-                <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'}/></a></li>
-                <li><a href="https://www.instagram.com/chartam_1/" target="__blank" ><img src={instagram} alt={'instagram logo'}/></a></li>
-                <li><a href="https://www.linkedin.com/in/alex-bulganin-00740525b/" target="__blank" ><img src={linkedin} alt={'linkedin logo'}/></a></li>
+                <li><a href="https://github.com/doal116?tab=overview" target="__blank" ><img src={github} alt={'github logo'} /></a></li>
+                <li><a href="https://www.linkedin.com/in/alex-bulganin-00740525b/" target="__blank" ><img src={linkedin} alt={'linkedin logo'} /></a></li>
             </ul>
         </header>
     )

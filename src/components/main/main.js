@@ -16,59 +16,33 @@ import frontEndLibraries from '../certifications/frontEndLibraries.jpg';
 import javaScriptAlgo from '../certifications/javascript.jpg';
 import alexBulganinCv from '../alexBulganinCv.pdf';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faChevronLeft, faChevronRight
-} from "@fortawesome/free-solid-svg-icons";
 import propTypes from 'prop-types';
-import { useEffect } from 'react';
 
-const gotToRight = () => {
-    document.getElementById(
-        'skills'
-    ).scrollLeft += 228;
-}
-const gotToLeft = () => {
-    document.getElementById(
-        'skills'
-    ).scrollLeft -= 228;
-}
+
 //----------About Me Section-----------//
 //----------------------------------------//
-const Skills = ({ skills }) => <div className='skills' id='skills'>
-    {
-        skills.map((skill, i) =>
-            <div className='skill' key={i.toString()}>
-                <img src={skill['image']} alt={`${skill['name']} logo`}></img>
-                <span>{skill['name']}</span>
-                <span className='experience'>{skill['experience']}</span>
-            </div>
-        )
-    }
-</div>;
+const Skills = ({ skills }) =>
+    <div className='skills' >
+        {
+            skills.map((skill, i) =>
+                <div className='skill' key={skill['name']}>
+                    <img src={skill['image']} alt={`${skill['name']} logo`}></img>
+                    <span>{skill['name']}</span>
+                    <span className='experience'>{skill['experience']}</span>
+                </div>
+            )
+        }
+    </div>;
 
 const AboutMe = ({ skills }) => {
 
-    useEffect(() => {
-        let right = true;
-        setInterval(() => {
-            if (document.getElementById('skills').scrollLeft > 1200)
-                right = false;
-
-            if (right) gotToRight();
-            else gotToLeft();
-
-            if (!right && document.getElementById('skills').scrollLeft === 0)
-                right = true;
-        }, 3500);
-    });
     return (
         <section id="aboutMe">
             <div className="info">
                 <div className='leftSide'>
                     <h1>About Me</h1>
                     <p>I'm an eager and meticulous front-end developer looking for an entry-level position with a company to put my coding abilities to use, solve challenging issues, and aid in a prompt completion of projects.</p>
-                    <p>I'm also interested in backend development and would like to be build a proficiency in that area.</p>
+                    <p>In addition, I'm also interested in backend development and would like to build a proficiency in that area.</p>
                     <div className='hireCv'>
                         <a href="mailto:bulganinbralex@yahoo.com" ><button className='hireMe' >HIRE ME</button></a>
                         <a href={alexBulganinCv} target="__blank" >
@@ -77,12 +51,6 @@ const AboutMe = ({ skills }) => {
                 </div>
                 <div className='rightSide'>
                     <Skills skills={skills} />
-                    <div className='prev' onClick={gotToLeft}>
-                        <FontAwesomeIcon icon={faChevronLeft} className="prevArrow" />
-                    </div>
-                    <div className='next' onClick={gotToRight}>
-                        <FontAwesomeIcon icon={faChevronRight} className="nextArrow" />
-                    </div>
                 </div>
             </div>
         </section>
@@ -129,7 +97,7 @@ CertificateBox.propTypes = {
 //---------------------------------------//
 const PortfolioBox = ({ portfolio }) =>
     portfolio.map((elem, i) =>
-        <a href={elem['link']}>
+        <a href={elem['link']} key={i.toString()}>
             <div className='projectBox' key={i.toString()}>
                 <img src={elem['image']} alt="project Display"></img>
                 <div>
@@ -160,43 +128,43 @@ Portfolio.propTypes = {
 //---------------------------------------//
 
 function Main() {
-    const skills = [{
-        name: 'React.js',
-        image: react,
-        experience: '6 months of experience'
-    },
-    {
-        name: 'JavaScript',
-        image: js,
-        experience: '7 months of experience'
-    }, {
-        name: 'Python',
-        image: python,
-        experience: '2 years of experience'
-    }, {
-        name: 'C',
-        image: C,
-        experience: '3 years of experience'
-    }, {
-        name: 'Bash',
-        image: bash,
-        experience: '4 months of experience'
-    },
-    {
-        name: 'Git',
-        image: git,
-        experience: '1 year of experience'
-    },
-    {
-        name: 'mongodb',
-        image: mongodb,
-        experience: '3 months of experience'
-    },
-    {
-        name: 'node.js',
-        image: node,
-        experience: '4 months of experience'
-    }
+    const skills = [
+        {
+            name: 'JavaScript',
+            image: js,
+            experience: '7 months of experience'
+        }, {
+            name: 'React.js',
+            image: react,
+            experience: '6 months of experience'
+        }, {
+            name: 'Python',
+            image: python,
+            experience: '2 years of experience'
+        }, {
+            name: 'C',
+            image: C,
+            experience: '3 years of experience'
+        }, {
+            name: 'Bash',
+            image: bash,
+            experience: '4 months of experience'
+        },
+        {
+            name: 'Git',
+            image: git,
+            experience: '1 year of experience'
+        },
+        {
+            name: 'mongodb',
+            image: mongodb,
+            experience: '3 months of experience'
+        },
+        {
+            name: 'node.js',
+            image: node,
+            experience: '4 months of experience'
+        }
     ];
     const certificates = [
         {
@@ -230,24 +198,24 @@ function Main() {
             name: 'E-commerce website',
             description: 'The development of this online store is ongoing. The objective is to create a responsive, front-end and back-end integrated e-commerce website.',
             image: ecommerce,
-            link:'https://github.com/doal116/e-commerce-react-website'
+            link: 'https://github.com/doal116/e-commerce-react-website'
         },
         {
             name: 'React MarkDownEditor',
             description: 'Markdown Previewer that was built using HTML, JavaScript, SASSY CSS, and React.',
             image: markDownEditor,
-            link:'https://codepen.io/chartam1/full/abYxOqy'
+            link: 'https://codepen.io/chartam1/full/abYxOqy'
         },
         {
-            name:'Technical Documentation Page',
-            description:'Simple Technical Documentation page Built using just HTML and CSS.',
-            image:technicalDocumentationPage,
-            link:'https://codepen.io/chartam1/full/PodzggK'
+            name: 'Technical Documentation Page',
+            description: 'Simple Technical Documentation page Built using just HTML and CSS.',
+            image: technicalDocumentationPage,
+            link: 'https://codepen.io/chartam1/full/PodzggK'
         }
     ];
     return (
         <main>
-            <AboutMe skills={skills} />
+            <AboutMe skills={skills}  />
             <Certificates certificates={certificates} />
             <Portfolio portfolio={portfolio} />
         </main>

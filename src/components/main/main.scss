@@ -20,7 +20,7 @@
             .hireCv {
                 display: flex;
                 flex-wrap: wrap;
-                row-gap: 20pxs;
+                row-gap: 20px;
                 column-gap: 22px;
 
                 .hireMe {
@@ -58,19 +58,22 @@
             justify-self: end;
             margin-left: 30px;
 
+            width: 250px;
             .skills {
-                display: flex;
-                column-gap: 30px;
                 width: inherit;
                 overflow-x: auto;
                 padding: 0px 0px 20px 0px;
-                scroll-behavior: smooth;
+                position: relative;
+                height: 200px;
 
                 .skill {
-                    margin: 8% 0px 0px 0px;
+                    position: absolute;
+                    top: 0;
+                    left: 100%;
+                    animation: 32s autoplay2 infinite ease-in-out;
+
                     width: 200px;
                     height: 200px;
-                    flex: 0 0 auto;
                     background-color: #3F3F3F;
                     display: flex;
                     flex-direction: column;
@@ -91,13 +94,43 @@
                         font-family: 'Source Sans Pro';
                     }
                 }
+
+                $delay: 0s, 4s, 8s, 12s, 16s, 20s, 24s, 28s;
+
+                @for $i from 1 through 8 {
+                    >*:nth-child(#{$i}) {
+                        animation-delay: nth($delay, $i);
+                    }
+                }
+
+                @keyframes autoplay2 {
+                    0% {
+                        left: 100%;
+                    }
+
+                    4% {
+                        left: 0%;
+                    }
+
+                    10% {
+                        left: 0%;
+                    }
+
+                    18% {
+                        left: -100%;
+                    }
+
+                    100% {
+                        left: -100%;
+                    }
+                }
+
             }
 
 
             .skills::-webkit-scrollbar {
                 background-color: transparent;
                 height: 0px;
-
             }
 
             %scrollButtons {
@@ -241,10 +274,12 @@
         width: fit-content;
         margin: 0px auto 0px auto;
         padding: 50px 0px 50px 0px;
-        a{
+
+        a {
             text-decoration: none;
             color: inherit;
         }
+
         .projectBox {
             border: 1px solid #bdbdbd;
             cursor: pointer;
@@ -264,11 +299,13 @@
             img {
                 max-width: 300px;
             }
-            div{
+
+            div {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                .description{
+
+                .description {
                     text-align: center;
                     display: block;
                     width: 280px;
@@ -277,7 +314,7 @@
             }
         }
 
-        .projectBox:hover{
+        .projectBox:hover {
             width: 310px;
             height: fit-content+10px;
             box-shadow: 1px 1px 10px #676767;
@@ -297,9 +334,7 @@
                 width: 531px;
             }
 
-            .rightSide {
-                width: 430px;
-            }
+            
         }
     }
 
@@ -331,16 +366,13 @@
             display: flex;
             flex-wrap: wrap;
             row-gap: 32px;
-
+            width: auto;
             .leftSide {
                 margin: 0px 24px 0px 24px;
                 width: auto;
             }
 
-            .rightSide {
-                width: 220px;
-                margin: 0px auto 0px auto;
-            }
+            
         }
     }
 
@@ -378,16 +410,13 @@
 
         .info {
             display: flex;
-            flex-wrap: wrap;
             row-gap: 24px;
-
+            width: 70%;
             .leftSide {
                 margin: 0px 24px 0px 24px;
-                width: auto;
             }
 
             .rightSide {
-                width: 90vw;
                 margin: 0px auto 0px auto;
             }
         }

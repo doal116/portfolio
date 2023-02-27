@@ -19,7 +19,7 @@
 #aboutMe .info .leftSide .hireCv {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 20pxs;
+  row-gap: 20px;
   -moz-column-gap: 22px;
        column-gap: 22px;
 }
@@ -49,21 +49,22 @@
   position: relative;
   justify-self: end;
   margin-left: 30px;
+  width: 250px;
 }
 #aboutMe .info .rightSide .skills {
-  display: flex;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
   width: inherit;
   overflow-x: auto;
   padding: 0px 0px 20px 0px;
-  scroll-behavior: smooth;
+  position: relative;
+  height: 200px;
 }
 #aboutMe .info .rightSide .skills .skill {
-  margin: 8% 0px 0px 0px;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: 32s autoplay2 infinite ease-in-out;
   width: 200px;
   height: 200px;
-  flex: 0 0 auto;
   background-color: #3F3F3F;
   display: flex;
   flex-direction: column;
@@ -80,6 +81,47 @@
 #aboutMe .info .rightSide .skills .skill span {
   color: white;
   font-family: "Source Sans Pro";
+}
+#aboutMe .info .rightSide .skills > *:nth-child(1) {
+  animation-delay: 0s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(2) {
+  animation-delay: 4s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(3) {
+  animation-delay: 8s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(4) {
+  animation-delay: 12s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(5) {
+  animation-delay: 16s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(6) {
+  animation-delay: 20s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(7) {
+  animation-delay: 24s;
+}
+#aboutMe .info .rightSide .skills > *:nth-child(8) {
+  animation-delay: 28s;
+}
+@keyframes autoplay2 {
+  0% {
+    left: 100%;
+  }
+  4% {
+    left: 0%;
+  }
+  10% {
+    left: 0%;
+  }
+  18% {
+    left: -100%;
+  }
+  100% {
+    left: -100%;
+  }
 }
 #aboutMe .info .rightSide .skills::-webkit-scrollbar {
   background-color: transparent;
@@ -253,9 +295,6 @@
   #aboutMe .info .leftSide {
     width: 531px;
   }
-  #aboutMe .info .rightSide {
-    width: 430px;
-  }
   #certificates .certificateDisplay {
     display: flex;
     flex-wrap: wrap;
@@ -278,14 +317,11 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 32px;
+    width: auto;
   }
   #aboutMe .info .leftSide {
     margin: 0px 24px 0px 24px;
     width: auto;
-  }
-  #aboutMe .info .rightSide {
-    width: 220px;
-    margin: 0px auto 0px auto;
   }
   #certificates .certificateDisplay {
     display: flex;
@@ -310,15 +346,13 @@
   }
   #aboutMe .info {
     display: flex;
-    flex-wrap: wrap;
     row-gap: 24px;
+    width: 70%;
   }
   #aboutMe .info .leftSide {
     margin: 0px 24px 0px 24px;
-    width: auto;
   }
   #aboutMe .info .rightSide {
-    width: 90vw;
     margin: 0px auto 0px auto;
   }
   #certificates .certificateDisplay {
