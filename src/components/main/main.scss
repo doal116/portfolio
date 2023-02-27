@@ -133,36 +133,7 @@
                 height: 0px;
             }
 
-            %scrollButtons {
-                position: absolute;
-                height: 36px;
-                background-color: white;
-                top: 38%;
-                width: 24px;
-                cursor: pointer;
-            }
-
-            .prev {
-                @extend %scrollButtons;
-                border-top-right-radius: 6px;
-                border-bottom-right-radius: 6px;
-
-                .prevArrow {
-                    margin: 40% 0px 0px 20%;
-                }
-
-            }
-
-            .next {
-                @extend %scrollButtons;
-                border-top-left-radius: 6px;
-                border-bottom-left-radius: 6px;
-                right: 0;
-
-                .nextArrow {
-                    margin: 40% 0px 0px 20%;
-                }
-            }
+            
         }
     }
 }

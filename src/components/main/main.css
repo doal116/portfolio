@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 5px 2px 15px rgb(81, 81, 81);
+  box-shadow: 5px 2px 15px rgb(147, 147, 147);
 }
 #aboutMe .info .rightSide .skills .skill img {
   margin: auto 0px auto 0px;
@@ -126,29 +126,6 @@
 #aboutMe .info .rightSide .skills::-webkit-scrollbar {
   background-color: transparent;
   height: 0px;
-}
-#aboutMe .info .rightSide .next, #aboutMe .info .rightSide .prev {
-  position: absolute;
-  height: 36px;
-  background-color: white;
-  top: 38%;
-  width: 24px;
-  cursor: pointer;
-}
-#aboutMe .info .rightSide .prev {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-#aboutMe .info .rightSide .prev .prevArrow {
-  margin: 40% 0px 0px 20%;
-}
-#aboutMe .info .rightSide .next {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  right: 0;
-}
-#aboutMe .info .rightSide .next .nextArrow {
-  margin: 40% 0px 0px 20%;
 }
 
 #certificates {
